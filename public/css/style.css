@@ -1,0 +1,67 @@
+a{
+    text-decoration:none
+}
+.container-fluid{
+    margin:20px 0px;
+}
+.container{
+    padding-top: 15px;
+}
+.row{
+    margin:10px 10px;
+    padding: 4px 4px;
+}
+.card{
+    margin: 20px 2px;
+}
+.card-title{
+    border: 2px solid black;
+    padding: 4px 4px;
+}
+p{
+    opacity: .8;
+}
+.inner{
+    overflow:hidden;
+}
+.inner img{
+    transition: all 1.5s ease;
+}
+.inner:hover img{
+    transform:scale(1.5);
+}
+.carousel-item p{
+    border-bottom: 1px solid white;
+    color:white;
+    opacity: .8;
+    font-size: 20px;
+    background: rgba(0, 0, 0,.5);
+}
+.carousel-item h5{
+    font-size: 15px;
+}
+nav{
+    margin-bottom: 10px;
+}
+.votre{
+    color: green;
+    border-bottom: red 4px solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.commune{
+    color: red;
+    border-top: green 4px solid;
+    padding: 6px 6px;
+    background: rgba(133, 98, 98, 0.2);
+    font-family: cursive;
+}
+.intro{
+    margin-top:20px;
+}
+.blog-footer{
+    justify-content: center;
+    text-align: center;
+}
+a{
+    font-size: 20px;
+}

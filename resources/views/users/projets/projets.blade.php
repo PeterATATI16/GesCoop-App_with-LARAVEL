@@ -1,0 +1,43 @@
+@extends('users.user-layout')
+@section('content')
+
+<!-- Head -->
+ <!-- Content Header (Page header) -->
+ <div class="content-header shadow-sm">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-12" style="display:flex;">
+          <h2 class="border-bottom pb-2 mb-6 ">Nos projets en cours</h2>
+          <div class="float-end justify-content-center" style="float:right;margin:0px 20px;">{{ $projets->links()}}</div>
+          </div><!-- /.col -->
+          <a class="border-bottom pb-2 mb-6 btn btn-secondary" href="{{route('admin')}}">Quitter</a>
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+ </div>
+    <!-- /.content-header -->
+    @foreach($projets as $projet)
+    <div class="partenaire rounded shadow-lg" style="margin:20px 20px;padding:10px;">
+    <div class="num"><h3>Projet {{ $projet->id}}</h3></div><hr>
+        <div class="nom">
+            <p><strong>Libelle :</strong>  {{$projet->libelle}}</p>
+        </div>
+        <hr>
+        <div class="pays">
+            <p><strong>Cout :</strong>  {{$projet->cout}}</p>
+        </div><hr>
+        <div class="pays">
+            <p><strong>Date initiation :</strong>  {{$projet->date_initiation}}</p>
+        </div><hr>
+        <div class="pays">
+            @foreach($partenaires as $partenaire)
+                @if($projet->partenaire_id == $partenaire->id)
+            <p><strong>Partenaire concerné  :</strong> {{$partenaire->nom}}</p>
+                @endif
+            @endforeach
+        </div>
+        <div class="pays">
+            <p><strong>Statut :</strong>  {{$projet->statut}}</p>
+        </div>
+    </div>
+    @endforeach
+@endsection

@@ -1,0 +1,22 @@
+#part{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td,th{
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+tr:nth-child(even){
+    background-color: black;
+
+}
+th{
+    padding: 12px 0;
+    text-align : left;
+    background-color: cadetblue;
+    color: cornsilk;
+}
+.body{
+    background-color: red;
+}
